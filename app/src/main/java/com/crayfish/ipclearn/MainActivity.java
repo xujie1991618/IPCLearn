@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.crayfish.ipclearn.aidl.BookManagerActivity;
 import com.crayfish.ipclearn.provider.ProviderActivity;
+import com.crayfish.ipclearn.socket.SocketActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn1 = findViewById(R.id.btn1);
         Button btn2 = findViewById(R.id.btn2);
         Button btn3 = findViewById(R.id.btn3);
+        Button btn4 = findViewById(R.id.btn4);
         item = new SerializableItem(11,"jake");
         text1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,ProviderActivity.class));
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SocketActivity.class));
             }
         });
     }
