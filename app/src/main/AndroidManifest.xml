@@ -41,6 +41,9 @@
 
         <activity android:name=".socket.SocketActivity"/>
         <service android:name=".socket.TCPServerService" android:process=":remote"/>
+
+        <activity android:name=".aidl.BinderPoolActivity"/>
+        <service android:name=".aidl.BinderPoolService" android:process=":remote"/>
     </application>
 
 </manifest>
